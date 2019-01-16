@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-// import components
-
+import QuestionText from "./QuestionText.jsx";
+import ChoiceContainer from "./ChoiceContainer.jsx";
 
 class Question extends Component {
-  
+
   render() {
     return (
       <div>
-        Add your QuestionText, Reset Button and AnswerButtons here.  
+        <QuestionText />
+        <ChoiceContainer />
       </div>
     );
   }
