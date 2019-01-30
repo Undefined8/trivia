@@ -4,7 +4,7 @@ class QuestionText extends React.Component {
     render() {
         return (
             <div className="question-text">
-                <h1>Question-text</h1>
+                <h1>{this.props.text}</h1>
             </div>
         );
     }

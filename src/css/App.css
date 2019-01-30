@@ -7,4 +7,38 @@ body {
   text-align: center;
 }
 
+.question-container{
+  width: 100vw;
+  height: 100vh;
+}
 
+.question-text{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-text h1{
+  text-align: center;
+}
+
+.choice-container {
+  height: 50vh;
+  display: flex;
+  
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.choice {
+  width: 50%;
+  height: 25%;
+}
+
+.choice-btn{
+  width: 100%;
+  height: 100%;
+  
+  margin: 10px;
+}
