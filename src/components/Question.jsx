@@ -4,14 +4,11 @@ import ChoiceContainer from "./ChoiceContainer.jsx";
 
 class Question extends Component {
   
-  choices = ["Rock", "Paper", "Scissors", "Lizard"];
-  question = "What beats Rock?";
-  
   render() {
     return (
       <div className="question-container">
-        <QuestionText text={this.question}/>
-        <ChoiceContainer choices={this.choices}/>
+        <QuestionText text={this.props.question.question_text}/>
+        <ChoiceContainer choices={this.props.question.choices}/>
       </div>
     );
   }
