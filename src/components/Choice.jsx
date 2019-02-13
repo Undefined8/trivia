@@ -4,7 +4,7 @@ class Choice extends React.Component {
     render() {
         return (
             <div className="choice">
-                <button className="choice-btn">{this.props.text}</button>
+                <button onClick={() => this.props.handleButtonClick(this.props.choiceIndex)} className="choice-btn">{this.props.text}</button>
             </div>
         );
     }

@@ -8,7 +8,7 @@ class Question extends Component {
     return (
       <div className="question-container">
         <QuestionText text={this.props.question.question_text}/>
-        <ChoiceContainer choices={this.props.question.choices}/>
+        <ChoiceContainer handleButtonClick={this.props.handleButtonClick} choices={this.props.question.choices}/> 
       </div>
     );
   }
