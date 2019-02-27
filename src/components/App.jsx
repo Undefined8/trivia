@@ -36,11 +36,20 @@ class App extends Component {
         choices: [],
         correct_choice_index: null,
       },
-      selectedChoiceIndex: null
+      selectedChoiceIndex: null,
+      isCorrectAnswer: false
     };
   }
 
   handleButtonClick = (choiceIndex) => {
+    if (choiceIndex === this.state.currentQuestion.correct_choice_index) {
+      this.setState({
+        isCorrectAnswer: true
+      });
+      alert('CORRECT YOU WIN AND ARE SMART GOOD JOB!!!!!');
+    }else{
+      alert('THE DOG PANTS GOD NAMED JEFF IS SAD AND IS POUTING YOU ARE WRONG!!!!!!!!!!!!');
+    }
     this.setState({
       selectedChoiceIndex: choiceIndex
     });

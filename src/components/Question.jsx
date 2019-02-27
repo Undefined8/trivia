@@ -7,6 +7,7 @@ class Question extends Component {
   render() {
     return (
       <div className="question-container">
+        <ResetButton />
         <QuestionText text={this.props.question.question_text}/>
         <ChoiceContainer handleButtonClick={this.props.handleButtonClick} choices={this.props.question.choices}/> 
       </div>
