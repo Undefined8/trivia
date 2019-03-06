@@ -41,13 +41,29 @@ class App extends Component {
     };
   }
 
+  resetHandler = () => {
+    let questionsArr = Object.keys(this.state.questions);
+
+    let numQuestions = questionsArr.length;
+    let randomIndex = Math.floor(Math.random() * numQuestions);
+
+    this.setState({
+      currentQuestion: this.state.questions[questionsArr[randomIndex]],
+      selectedChoiceIndex: null,
+      isCorrectAnswer: false
+    }, console.log("Inside Reset Handler", this.state));
+
+    //console.log("Inside Reset Handler", this.state);
+  }
+
   handleButtonClick = (choiceIndex) => {
     if (choiceIndex === this.state.currentQuestion.correct_choice_index) {
       this.setState({
         isCorrectAnswer: true
       });
       alert('CORRECT YOU WIN AND ARE SMART GOOD JOB!!!!!');
-    }else{
+    }
+    else {
       alert('THE DOG PANTS GOD NAMED JEFF IS SAD AND IS POUTING YOU ARE WRONG!!!!!!!!!!!!');
     }
     this.setState({
@@ -56,10 +72,10 @@ class App extends Component {
   }
 
   render() {
-    console.log("After State:", this.state);
+    //console.log("After State:", this.state);
     return (
       <div className="app">
-        <Question handleButtonClick={this.handleButtonClick} question={this.state.currentQuestion}/>
+        <Question handleButtonClick={this.handleButtonClick} question={this.state.currentQuestion} resetHandler = {this.resetHandler}/>
       </div>
     );
   }

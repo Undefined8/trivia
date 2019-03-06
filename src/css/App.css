@@ -13,7 +13,7 @@ body {
 }
 
 .question-text{
-  height: 50vh;
+  height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +21,18 @@ body {
 
 .question-text h1{
   text-align: center;
+}
+
+.button-row {
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reset-btn {
+  height: 5vh;
+  background-color: red;
+  color: white;
 }
 
 .choice-container {
