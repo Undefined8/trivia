@@ -59,9 +59,14 @@ class App extends Component {
   handleButtonClick = (choiceIndex) => {
     if (choiceIndex === this.state.currentQuestion.correct_choice_index) {
       this.setState({
+        currentQuestion: {
+          ...this.state.currentQuestion,
+          question_text: "Correct!!"
+        },
         isCorrectAnswer: true
+      }, () => {
+        setTimeout(() => {this.resetHandler()}, 1500);
       });
-      alert('CORRECT YOU WIN AND ARE SMART GOOD JOB!!!!!');
     }
     else {
       alert('THE DOG PANTS GOD NAMED JEFF IS SAD AND IS POUTING YOU ARE WRONG!!!!!!!!!!!!');
